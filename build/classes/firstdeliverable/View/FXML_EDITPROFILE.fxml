@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="firstdeliverable.Controller.EditProfileController">
+   <children>
+      <AnchorPane prefHeight="38.0" prefWidth="350.0" style="-fx-background-color: #ABD8ED;">
+         <children>
+            <Button layoutX="8.0" layoutY="7.0" mnemonicParsing="false" onAction="#outEditProfile" text="Back" />
+            <Text layoutX="138.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Profile">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Button layoutX="299.0" layoutY="7.0" mnemonicParsing="false" onAction="#saveData" text="Save" />
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="picture" fitHeight="119.0" fitWidth="122.0" layoutX="114.0" layoutY="55.0">
+         <clip>
+            <Circle fx:id="circle" centerX="60" centerY="60" fill="aqua" radius="60" />
+         </clip>
+         <image>
+            <Image url="@../../image/profileImages/profileImage2.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="110.0" layoutY="181.0" mnemonicParsing="false" onAction="#changeAvatar" style="-fx-background-insets: 0; -fx-background-color: transparent;" text="Click to modify avatar" textFill="#797979" />
+      <Label layoutX="50.0" layoutY="233.0" text="Username: ">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameField" editable="false" layoutX="148.0" layoutY="230.0" />
+      <Label layoutX="50.0" layoutY="278.0" text="Password: ">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="passwordField" layoutX="148.0" layoutY="275.0" />
+      <Label layoutX="50.0" layoutY="319.0" text="Personalized State: ">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="162.0" layoutY="320.0" opacity="0.61" text="(up to 200 letters)">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="stateField" layoutX="50.0" layoutY="345.0" prefHeight="112.0" prefWidth="247.0" wrapText="true" />
+      <Button layoutX="122.0" layoutY="62.0" mnemonicParsing="false" onAction="#changeAvatar" prefHeight="105.0" prefWidth="106.0" style="-fx-background-insets: 0; -fx-background-color: transparent;" textFill="#797979" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="firstdeliverable.Controller.MainController">
+   <children>
+      <Button layoutX="14.0" layoutY="31.0" mnemonicParsing="false" onAction="#outMain" text="Back" />
+      <Button layoutY="470.0" mnemonicParsing="false" prefWidth="72.0" style="-fx-background-insets: 0; -fx-pref-height: 30; -fx-pref-width: 60; -fx-background-color: #ABD8ED;" text="Main" />
+      <Separator layoutX="75.0" layoutY="469.0" prefWidth="200.0" />
+      <Button layoutX="270.0" layoutY="470.0" mnemonicParsing="false" onAction="#goProfile" style="-fx-background-insets: 0; -fx-pref-height: 30; -fx-pref-width: 80;" text="Profile" />
+      <Button layoutX="60.0" layoutY="470.0" mnemonicParsing="false" onAction="#goForum" prefWidth="87.0" style="-fx-background-insets: 0; -fx-pref-height: 30; -fx-pref-width: 70;" text="Forum" />
+      <Button layoutX="130.0" layoutY="470.0" mnemonicParsing="false" onAction="#goPost" prefWidth="87.0" style="-fx-background-insets: 0; -fx-pref-height: 30; -fx-pref-width: 70;" text="Post" />
+      <Button layoutX="200.0" layoutY="470.0" mnemonicParsing="false" prefWidth="87.0" style="-fx-background-insets: 0; -fx-pref-height: 30; -fx-pref-width: 70;" text="News" />
+      <Text layoutX="54.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="For the first deliverable, I only made my promise about the function of the &quot;back&quot; button and &quot;profile&quot; button. The rest of the buttons are for future work. Thank you!" visible="false" wrappingWidth="242.88275146484375" />
+      <VBox layoutX="9.0" layoutY="64.0" prefHeight="177.0" prefWidth="332.0">
+         <children>
+            <StackPane fx:id="adBoard" prefHeight="169.0" prefWidth="321.0">
+               <children>
+                  <ImageView fx:id="ad1" fitHeight="170.0" fitWidth="330.0" onMouseClicked="#goOfficial1" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/mainImages/mainImage1.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="ad2" fitHeight="170.0" fitWidth="330.0" onMouseClicked="#goOfficial2" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../../image/mainImages/mainImage2.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="ad3" fitHeight="170.0" fitWidth="330.0" onMouseClicked="#goOfficial3" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../../image/mainImages/mainImage3.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="ad4" fitHeight="171.0" fitWidth="330.0" onMouseClicked="#goOfficial4" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../../image/mainImages/mainImage4.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <AnchorPane prefHeight="9.0" prefWidth="332.0">
+               <children>
+                  <Circle fx:id="circleButton1" fill="WHITE" layoutX="211.0" layoutY="-9.0" onMouseClicked="#showImage1" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="circleButton2" fill="WHITE" layoutX="238.0" layoutY="-9.0" onMouseClicked="#showImage2" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="circleButton3" fill="WHITE" layoutX="265.0" layoutY="-9.0" onMouseClicked="#showImage3" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="circleButton4" fill="WHITE" layoutX="291.0" layoutY="-9.0" onMouseClicked="#showImage4" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

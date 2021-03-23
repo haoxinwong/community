@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="firstdeliverable.Controller.PostController">
+   <children>
+      <Button layoutY="470.0" mnemonicParsing="false" onAction="#goMain" prefWidth="72.0" style="-fx-background-insets: 0; -fx-pref-height: 30; -fx-pref-width: 60;" text="Main" />
+      <Separator layoutX="75.0" layoutY="469.0" prefWidth="200.0" />
+      <Button layoutX="270.0" layoutY="470.0" mnemonicParsing="false" onAction="#goProfile" style="-fx-background-insets: 0; -fx-pref-height: 30; -fx-pref-width: 80;" text="Profile" />
+      <Button layoutX="60.0" layoutY="470.0" mnemonicParsing="false" onAction="#goForum" prefWidth="87.0" style="-fx-background-insets: 0; -fx-pref-height: 30; -fx-pref-width: 70;" text="Forum" />
+      <Button layoutX="130.0" layoutY="470.0" mnemonicParsing="false" prefWidth="87.0" style="-fx-background-insets: 0; -fx-pref-height: 30; -fx-pref-width: 70; -fx-background-color: #ABD8ED;" text="Post" />
+      <Button layoutX="200.0" layoutY="470.0" mnemonicParsing="false" prefWidth="87.0" style="-fx-background-insets: 0; -fx-pref-height: 30; -fx-pref-width: 70;" text="News" />
+      <Text layoutX="54.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="For the first deliverable, I only made my promise about the function of the &quot;back&quot; button and &quot;profile&quot; button. The rest of the buttons are for future work. Thank you!" visible="false" wrappingWidth="242.88275146484375" />
+      <Label layoutX="112.0" layoutY="6.0" text="Start a new post">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="300.0" layoutY="3.0" mnemonicParsing="false" onAction="#send" text="Send" />
+      <Separator layoutY="27.0" prefHeight="21.0" prefWidth="350.0" />
+      <VBox layoutY="36.0" prefHeight="434.0" prefWidth="350.0">
+         <children>
+            <AnchorPane prefHeight="32.0" prefWidth="350.0">
+               <children>
+                  <Label layoutX="10.0" layoutY="8.0" text="Send to: " />
+                  <TextField fx:id="selection" editable="false" layoutX="57.0" layoutY="4.0" prefHeight="25.0" prefWidth="290.0" promptText="(Select section for more views)                               &gt;" style="-fx-border-color: transparent; -fx-background-color: transparent;" />
+                  <Button layoutX="57.0" layoutY="4.0" mnemonicParsing="false" onAction="#goSections" prefHeight="25.0" prefWidth="290.0" style="-fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <Separator prefWidth="200.0" />
+            <AnchorPane prefHeight="30.0" prefWidth="350.0">
+               <children>
+                  <TextField fx:id="title" alignment="TOP_LEFT" layoutX="6.0" layoutY="2.0" prefHeight="27.0" prefWidth="307.0" promptText="Title(Necessary, please please no more than 50 letters)" style="-fx-border-color: transparent; -fx-background-color: transparent;" />
+                  <Text fx:id="titleCounter" layoutX="315.0" layoutY="19.0" opacity="0.55" strokeType="OUTSIDE" strokeWidth="0.0" text="0/50">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <Separator prefWidth="200.0" />
+            <TextArea fx:id="description" prefHeight="367.0" prefWidth="350.0" promptText="Show time!(No more than 10000 words)" style="-fx-background-color: gray;" wrapText="true" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
